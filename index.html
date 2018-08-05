@@ -1,8 +1,85 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>nograph Page</title>
+<!-- Based on W3 Schools template using their w3.css.  Thanks W3 Schools! -->
+<title>nograph - NoSQL and GraphDB</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Lato", sans-serif;}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Lato", sans-serif;
+    letter-spacing: 5px;
+}
+</style>
 </head>
 <body>
-<p>Hello</p>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">nograph</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#getstarted" class="w3-bar-item w3-button">Get Started</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+<!--
+  <img class="w3-image" src="/w3images/hamburger.jpg" alt="Hamburger Catering" width="1600" height="800">
+-->
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge">nograph</h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+      <h1 class="w3-center">About nograph</h1><br>
+      <h5 class="w3-center">Not exactly a new idea</h5>
+      <p class="w3-large">The nograph project is my attempt to make working with various NoSQL and GraphDBs easier.  Plenty of other projects and tutorials exist to
+help you with your favorite implementation.  I wanted something different.  It needed to be easier than JDBC but not as heavy as hibernate.  Seeing how GraphDBs are
+usually reduced to nodes and relationships, and these in turn can be reduced to documents, the overlap between these two approaches becomes obvious.  In fact GraphDBs
+are now commonly listed as a type of NoSQL.  One common breakdown has four elements.</p>
+<ul>
+<li>Key/value pairs</li>
+<li>Documents</li>
+<li>Wide columns</li>
+<li>Graphs</li>
+</ul>
+<p>My favorite indexing technology is Lucene.  When I started seeing others write about how Lucene was one of the earliest NoSQL data stores, I knew I wanted to build
+a GraphDB on top of Lucene.  It turns out that others have been doing that for a while. (List other Lucene graphs including those using SOLR and RDF). </p>
+<p>Even though others are doing this, I still wanted something easier (at least to me) to use for storing nodes and relationships.  The nograph API allows for easy 
+insertion of and searching for nodes and relationships.  Traversals are still a bit of a work in progress.  However, the NoSQL aspects make it even easier to use Lucene
+as a document store.  Simply set properties on the generic node implementation and the API will create a document and add it to the lucene index.  No schema needed, no
+field definitions or mappings.  Set some properties and save.
+  </div>
+  
+  <hr>
+  
+  <!-- Get Started -->
+  <div class="w3-row w3-padding-64" id="getstarted">
+      <h1 class="w3-center">Get Started</h1><br>
+      <h4>Repository</h4>
+      <p>The easiest way to get started is by cloning the <a target="_blank" href="https://www.github.com/aholinch/nograph">nograph</a> repository</p>
+    
+    
+  </div>
+
+  <hr>
+
+  
+<!-- End page content -->
+</div>
+
 </body>
 </html>
+
