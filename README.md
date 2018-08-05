@@ -1,2 +1,0 @@
-# nograph
-NoSQL and GraphDB
