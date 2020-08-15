@@ -18,7 +18,7 @@ limitations under the License.
 package org.nograph;
 
 /**
- * A basic interface for getting and setting IDs that can be strings or longs.  Type conversion may not be safe.
+ * A basic interface for getting and setting IDs that can be strings or longs.  Type conversion may not be safe converting string to long.
  * 
  * @author aholinch
  *
