@@ -8,6 +8,6 @@ Include any relevant LICENSE files as well.
 Well, I don't always have an internet connection on the machines I develop.  Also, Maven, Gradle, pip, nm, etc. have all taken me to places where ciruclar dependencies could not be resolved.
 
 # Won't you miss out on critical updates?
-It's a possibility.  Period checks for new versions of third party libraries are important.  However, not all updates are "good."  For example, Lucene likes to make updates that break backwards compatibility.  So even if I was using Maven, I'd need to evaluate all new versions, and then set a maximum version number in my build scripts.
+It's a possibility.  Periodic checks for new versions of third party libraries are important.  However, not all updates are "good."  For example, Lucene likes to make updates that break backwards compatibility.  So even if I was using Maven, I'd need to evaluate all new versions, and then set a maximum version number in my build scripts.
 
 There are pros and cons to both approaches.  This is how I'm doing things.
