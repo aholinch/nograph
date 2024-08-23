@@ -31,6 +31,7 @@ import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.IndexWriterConfig.OpenMode;
 import org.apache.lucene.index.MultiFields;
+import org.apache.lucene.index.MultiTerms;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
@@ -427,7 +428,11 @@ public class LuceneIndex
     		
     		td = is.search(query, max);
     			
-    		docs = new ArrayList<Document>((int)td.totalHits);
+    		// lucene 7
+    		//docs = new ArrayList<Document>((int)td.totalHits);
+    		
+    		// lucene 9
+    		docs = new ArrayList<Document>((int)td.totalHits.value);
     		
     		ScoreDoc sds[] = td.scoreDocs;
     		int len = sds.length;
@@ -489,7 +494,12 @@ public class LuceneIndex
     	try
     	{
 	        IndexReader reader = searcherMan.acquire().getIndexReader();
-	        Terms ts = MultiFields.getTerms(reader, field);
+	        
+	        // lucene 7
+	        //Terms ts = MultiFields.getTerms(reader, field);
+	        
+	        // lucene 9
+	        Terms ts = MultiTerms.getTerms(reader, field);
 	        TermsEnum te = ts.iterator();
 	        terms = new ArrayList<String>(100);
 	        
